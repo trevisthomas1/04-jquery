@@ -23,7 +23,32 @@
     // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
     // It's useful to become familiar with now.
 
-    $(document).ready(function() {
+    var pbjCounter = 0
+    var grilledCheeseCounter = 0
+    var roastBeefCounter = 0
+
+    $(document).ready(function () {
+
+      $("#pbj").on("click", function () {
+        alert("Peanut Butter is such a waste of calories.");
+        pbjCounter++;
+        alert("You've eaten " + pbjCounter + " peanut butter & jelly sandwiches!")
+        console.log(pbjCounter);
+      });
+
+      $("#grilledcheese").on("click", function () {
+        alert("Comfort food, huh?");
+        grilledCheeseCounter++;
+        alert("You've eaten " + grilledCheeseCounter + " grilled cheese sandwiches!")
+        console.log(grilledCheeseCounter);
+      });
+
+      $("#roastbeef").on("click", function () {
+        alert("I'm a vegetarian.");
+        roastBeefCounter++;
+        alert("You've eaten " + roastBeefCounter + " roast beef sandwiches!")
+        console.log(roastBeefCounter);
+      });
 
       // VARIABLES
       // ====================================================================
@@ -44,7 +69,7 @@
 
     });
 
-</script>
+  </script>
 
 </body>
 

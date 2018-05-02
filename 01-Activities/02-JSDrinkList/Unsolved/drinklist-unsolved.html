@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JavaScript Content!</title>
 </head>
+
 <body>
 
   <h1>Drink Selection!</h1>
@@ -30,6 +32,7 @@
     // 1. Create code that "grabs" the div with the matching id (#drink-options);
     // ...
 
+    var drinksDiv = document.getElementById("drink-options");
 
     // ...
 
@@ -38,10 +41,18 @@
     // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
     // ...
 
+    for (var i = 0; i < drinkList.length; i++) {
+      var drinkListElement = document.createElement("h3");
+      drinkListElement.textContent = drinkList[i];
+      drinksDiv.appendChild(drinkListElement);
+      drinkListElement.setAttribute("class", "fancy");
+      // This last function is applying the classes you wrote to that new element //
+    }
 
     // ...
 
   </script>
 
 </body>
+
 </html>

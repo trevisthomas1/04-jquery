@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Lexical Scope</title>
 </head>
+
 <body>
 
   <h2>Let's Talk About Scope!</h2>
@@ -14,25 +16,25 @@
     // -------------------------------------------
     var a = 1;
     function one() {
-      alert("One: " + a);
+      alert("One: " + a); //One: 1
     }
 
     // What will get alerted?
-    one();
+    one(); //Nothing
 
     // Example Two: Local Scope
     // -------------------------------------------
     function twotop() {
 
       function two(a) {
-        alert("Two: " + a);
+        alert("Two: " + a); //Two: 1
       }
 
-      two(a);
+      two(a); //Nothing
     }
 
     // What will get alerted?
-    twotop();
+    twotop(); //nothing
 
     // Example Three: Local Scope
     // -------------------------------------------
@@ -40,11 +42,11 @@
     function three() {
 
       var a = 3;
-      alert("Three: " + a);
+      alert("Three: " + a); //Three: 3
     }
 
     // What will get alerted?
-    three();
+    three(); //nothing
 
     // Example Four: Local Scope
     // -------------------------------------------
@@ -55,20 +57,21 @@
         var a = 3;
 
         function third() {
-          alert("Four: " + a);
+          alert("Four: " + a); //Four: 3
         }
 
-        third();
+        third(); //nothing
       }
 
-      second();
+      second(); //nothing
 
-      alert("Five: " + a);
+      alert("Five: " + a); //Five: 5
     }
 
     // What will get alerted?
-    first();
+    first(); //nothing
 
   </script>
 </body>
+
 </html>

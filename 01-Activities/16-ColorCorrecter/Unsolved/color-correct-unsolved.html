@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Correct Color Picker</title>
@@ -18,11 +19,13 @@
   </style>
 
 </head>
+
 <body>
 
   <div class="container">
     <h2>Correct Color Picker</h2>
-    <p>Pick the <b>color</b> of the word shown from the list below it.</p>
+    <p>Pick the
+      <b>color</b> of the word shown from the list below it.</p>
 
     <div class="card">
       <div class="card-header">
@@ -47,13 +50,14 @@
   <script>
 
     // JavaScript function that wraps everything
-    $(document).ready(function() {
+    $(document).ready(function () {
 
       // Array for word colors
-      var colorsOfText = [];
+      var colorsOfText = ["blue", "magenta", "black", "teal", "pink"];
 
       // Target word
-      var targetColor;
+      var targetColor = colors[math.floor(math.random(colorsOfText.length * 5) + 1)];
+      console.log(targetColor);
 
       // Target word color
       var targetColorOfText;
@@ -114,7 +118,7 @@
       }
 
       // Get id of element clicked by user
-      $("#color-picker").click(function(event) {
+      $("#color-picker").click(function (event) {
 
       });
 
@@ -124,4 +128,5 @@
 
   </script>
 </body>
+
 </html>
